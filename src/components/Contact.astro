@@ -1,0 +1,101 @@
+<section id="contact">
+    <div>
+        <h1>CONTACT US</h1>
+        <h2>We'd love to help you bring more love into your life.</h2>
+        <h3>We're just one bark away!</h3>
+    </div>
+    <form action="">
+        <input type="text" name="Fullname" placeholder="Full Name" required>
+        <input type="email" name="Email" placeholder="Email" required>
+        <input type="tel" name="Phone" placeholder="Phone (optional)">
+        <textarea name="Message" cols="30" rows="7" placeholder="Message" required></textarea>
+        <button>Submit</button>
+    </form>
+</section>
+
+<style>
+    section {
+        display: flex;
+        font-family: "Merriweather", serif;
+        font-style: italic;
+        color: #4b71e2;
+        background-color: #FBFBFE;
+        padding: 0 1rem;
+        scroll-margin-top: 3rem;
+    }
+    div {
+        flex-basis: 50%;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+    }
+    h1 {
+        font-size: 1.2rem;
+        font-weight: 300;
+        margin-bottom: 1rem;
+    }
+    h2 {
+        font-size: 1.5rem;
+        font-weight: 900;
+        margin-bottom: 1rem;
+    }
+    h3 {
+        font-size: 1.1rem;
+    }
+    form {
+        /* border: 1px solid black; */
+        margin: 1rem;
+        flex-basis: 50%;
+    }
+    input,
+    textarea {
+        background-color: transparent;
+        color: #4b71e2;
+        display: block;
+    }
+    input::placeholder,
+    textarea::placeholder {
+        color: #597ce4;
+    }
+    input {
+        border: none;
+        border-bottom: 2px solid #4b71e2;
+        width: 60%;
+        padding: 1rem 0;
+    }
+    input:focus {
+        outline: none;
+    }
+    textarea {
+        resize: none;
+        width: 90%;
+        padding: 1rem;
+        margin: 1rem 0;
+        border: 2px solid #4b71e2;
+    }
+    button {
+        background-color: transparent;
+        color: #4b71e2;
+        border: 2px solid #4b71e2;
+        border-radius: 0.5rem;
+        padding: 0.5rem 1rem;
+        cursor: pointer;
+        transition: 200ms ease-in-out;
+    }
+    button:hover {
+        background-color: #4b71e2;
+        color: #FBFBFE;
+        transform: translateY(-2px);
+    }
+    @media (max-width: 48rem) {
+        section {
+            flex-direction: column;
+        }
+        div {
+            margin-left: 1rem;
+        }
+        h1 {
+            margin-top: 2rem;
+        }
+    }
+</style>

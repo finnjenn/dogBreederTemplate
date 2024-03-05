@@ -1,0 +1,107 @@
+<section id="pups">
+    <h1>The Pups</h1>
+    <img src="/images/dog1.jpg" alt="" id="dog1-img">
+    <h2>Sunny & Daisy</h2>
+    <p>Meet Sunny and Daisy, the dynamic duo of pure golden joy! Sunny, with his soft, golden fur and sparkling eyes, is the eternal optimist, always ready to brighten your day with a wagging tail and playful antics. Daisy, the gentle flower of the pair, is known for her sweet demeanor and love for cuddles. Together, they create an irresistibly adorable bond that will fill your home with laughter, love, and a touch of golden warmth. Get ready for endless adventures and heart-melting moments with these two lovable Golden Retriever companions!</p>
+    <span>- FEBRUARY 22, 2024 -</span>
+    <div id="dog2">
+        <img src="/images/dog4.jpg" alt="" id="dog2-img">
+        <div class="text-box">
+            <h2>Charlie</h2>
+            <p>Meet Charlie, the spirited Golden Retriever with a heart as golden as his fur! Overflowing with playful energy and boundless affection, Charlie is your go-to companion for fun-filled adventures and heartwarming cuddles. Get ready to welcome joy, laughter, and unconditional love into your life with this fluffy bundle of charm!</p>
+            <span>- DECEMBER 12, 2023 -</span>
+        </div>
+    </div>
+    <div id="dog3">
+        <div class="text-box">
+            <h2>Bella</h2>
+            <p>Meet Bella, the epitome of grace and sweetness in a fur coat! With her soft, expressive eyes and gentle demeanor, Bella is a charming companion who steals hearts effortlessly. Always ready for a snuggle and a wagging tail to brighten your day. Get ready to be enchanted by Bella's playful spirit and affectionate nature as she becomes the perfect furry friend for a lifetime of joy!</p>
+            <span>- JANUARY 4, 2024 -</span>
+        </div>
+        <img src="/images/dog5.jpg" alt="" id="dog3-img">
+    </div>
+</section>
+
+<style>
+    section {
+        background-color: #edf1fc;
+        scroll-margin-top: 3rem;
+    }
+    h1 {
+        font-family: "Merriweather", serif;
+        font-style: italic;
+        color: #4b71e2;
+        font-size: 2rem;
+        text-align: center;
+        padding: 2rem 0;
+        margin-top: 1rem;
+        text-decoration: underline 2px solid #4b71e2;
+    }
+    h2 {
+        font-family: "Merriweather", serif;
+        font-style: italic;
+        font-weight: 300;
+        font-size: 1.5rem;
+        color: #4b71e2;
+        text-align: center;
+        padding: 1rem 0;
+    }
+    p {
+        color: #4b71e2;
+        font-family: "Merriweather", serif;
+        font-style: italic;
+        font-weight: 700;
+        text-align: center;
+        margin: 0 3rem;
+        line-height: 2rem;
+        text-wrap: balance;
+    }
+    span {
+        color: #4b71e2;
+        font-family: "Merriweather", serif;
+        font-style: italic;
+        display: block;
+        text-align: center;
+        padding: 1rem 0;
+    }
+    .text-box {
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+    }
+    #dog1-img {
+        width: 30rem;
+        margin: 0 auto;
+    }
+    #dog2,
+    #dog3 {
+        display: flex;
+        padding: 2rem
+    }
+    #dog2-img,
+    #dog3-img {
+        width: 25rem;
+        aspect-ratio: 1;
+        object-fit: cover;
+        margin: 0 auto;
+    }
+    @media (max-width: 48rem) {
+        #dog2 {
+            flex-direction: column;
+        }
+        #dog3 {
+            flex-direction: column-reverse;
+        }
+    }
+    @media (max-width: 600px) {
+        #dog2,
+        #dog3 {
+            padding: 0;
+        }
+        p {
+            margin: 0 1rem;
+        }
+    }
+    /* background-color: #4b71e2; */
+    /* color: #FBFBFE; */
+</style>
