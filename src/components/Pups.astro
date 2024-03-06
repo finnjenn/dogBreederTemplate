@@ -1,24 +1,24 @@
 <section id="pups">
     <h1>The Pups</h1>
-    <img src="/images/dog1.jpg" alt="" id="dog1-img">
-    <h2>Sunny & Daisy</h2>
-    <p>Meet Sunny and Daisy, the dynamic duo of pure golden joy! Sunny, with his soft, golden fur and sparkling eyes, is the eternal optimist, always ready to brighten your day with a wagging tail and playful antics. Daisy, the gentle flower of the pair, is known for her sweet demeanor and love for cuddles. Together, they create an irresistibly adorable bond that will fill your home with laughter, love, and a touch of golden warmth. Get ready for endless adventures and heart-melting moments with these two lovable Golden Retriever companions!</p>
-    <span>- FEBRUARY 22, 2024 -</span>
+    <img src="/images/dog1.jpg" alt="" id="dog1-img" class="pups-io">
+    <h2 class="pups-io">Sunny & Daisy</h2>
+    <p class="pups-io">Meet Sunny and Daisy, the dynamic duo of pure golden joy! Sunny, with his soft, golden fur and sparkling eyes, is the eternal optimist, always ready to brighten your day with a wagging tail and playful antics. Daisy, the gentle flower of the pair, is known for her sweet demeanor and love for cuddles. Together, they create an irresistibly adorable bond that will fill your home with laughter, love, and a touch of golden warmth. Get ready for endless adventures and heart-melting moments with these two lovable Golden Retriever companions!</p>
+    <span class="pups-io">- FEBRUARY 22, 2024 -</span>
     <div id="dog2">
-        <img src="/images/dog4.jpg" alt="" id="dog2-img">
+        <img src="/images/dog4.jpg" alt="" id="dog2-img" class="pups-io">
         <div class="text-box">
-            <h2>Charlie</h2>
-            <p>Meet Charlie, the spirited Golden Retriever with a heart as golden as his fur! Overflowing with playful energy and boundless affection, Charlie is your go-to companion for fun-filled adventures and heartwarming cuddles. Get ready to welcome joy, laughter, and unconditional love into your life with this fluffy bundle of charm!</p>
-            <span>- DECEMBER 12, 2023 -</span>
+            <h2 class="pups-io">Charlie</h2>
+            <p class="pups-io">Meet Charlie, the spirited Golden Retriever with a heart as golden as his fur! Overflowing with playful energy and boundless affection, Charlie is your go-to companion for fun-filled adventures and heartwarming cuddles. Get ready to welcome joy, laughter, and unconditional love into your life with this fluffy bundle of charm!</p>
+            <span class="pups-io">- DECEMBER 12, 2023 -</span>
         </div>
     </div>
     <div id="dog3">
         <div class="text-box">
-            <h2>Bella</h2>
-            <p>Meet Bella, the epitome of grace and sweetness in a fur coat! With her soft, expressive eyes and gentle demeanor, Bella is a charming companion who steals hearts effortlessly. Always ready for a snuggle and a wagging tail to brighten your day. Get ready to be enchanted by Bella's playful spirit and affectionate nature as she becomes the perfect furry friend for a lifetime of joy!</p>
-            <span>- JANUARY 4, 2024 -</span>
+            <h2 class="pups-io">Bella</h2>
+            <p class="pups-io">Meet Bella, the epitome of grace and sweetness in a fur coat! With her soft, expressive eyes and gentle demeanor, Bella is a charming companion who steals hearts effortlessly. Always ready for a snuggle and a wagging tail to brighten your day. Get ready to be enchanted by Bella's playful spirit and affectionate nature as she becomes the perfect furry friend for a lifetime of joy!</p>
+            <span class="pups-io">- JANUARY 4, 2024 -</span>
         </div>
-        <img src="/images/dog5.jpg" alt="" id="dog3-img">
+        <img src="/images/dog5.jpg" alt="" id="dog3-img" class="pups-io">
     </div>
 </section>
 
@@ -36,6 +36,10 @@
         padding: 2rem 0;
         margin-top: 1rem;
         text-decoration: underline 2px solid #4b71e2;
+    }
+    .pups-io {
+        opacity: 0;
+        transition: 800ms;
     }
     h2 {
         font-family: "Merriweather", serif;
@@ -102,6 +106,26 @@
             margin: 0 1rem;
         }
     }
-    /* background-color: #4b71e2; */
-    /* color: #FBFBFE; */
+    .show {
+        opacity: 1;
+    }
 </style>
+
+<script>
+    const content = document.querySelectorAll(".pups-io");
+
+    const observer = new IntersectionObserver(entries => {
+        entries.forEach(entry => {
+            // if (entry.isIntersecting) entry.target.classList.add("show");
+            entry.target.classList.toggle("show", entry.isIntersecting);
+        })
+    },
+    {
+        threshold: 0.3
+    }
+    )
+
+    content.forEach(item => {
+        observer.observe(item)
+    })
+</script>

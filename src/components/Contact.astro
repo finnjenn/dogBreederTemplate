@@ -1,8 +1,8 @@
 <section id="contact">
     <div>
-        <h1>CONTACT US</h1>
-        <h2>We'd love to help you bring more love into your life.</h2>
-        <h3>We're just one bark away!</h3>
+        <h1 class="contact-io">CONTACT US</h1>
+        <h2 class="contact-io">We'd love to help you bring more love into your life.</h2>
+        <h3 class="contact-io">We're just one bark away!</h3>
     </div>
     <form action="">
         <input type="text" name="Fullname" placeholder="Full Name" required>
@@ -87,6 +87,15 @@
         color: #FBFBFE;
         transform: translateY(-2px);
     }
+    .contact-io {
+        opacity: 0;
+        transform: translateY(3rem);
+        transition: 750ms ease-in-out;
+    }
+    .show {
+        opacity: 1;
+        transform: translate(0);
+    }
     @media (max-width: 48rem) {
         section {
             flex-direction: column;
@@ -99,3 +108,20 @@
         }
     }
 </style>
+
+<script>
+    const headers = document.querySelectorAll(".contact-io");
+
+    const observer = new IntersectionObserver(entries => {
+        entries.forEach(entry => {
+            entry.target.classList.toggle("show", entry.isIntersecting);
+        })
+    }, 
+    {
+        threshold: 0.5,
+    })
+
+    headers.forEach(h => {
+        observer.observe(h);
+    })
+</script>
